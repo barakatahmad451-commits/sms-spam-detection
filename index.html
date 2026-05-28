@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpamShield SMS Detector</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">🔒</span>
+          <div>
+            <h1>SpamShield</h1>
+            <p>SMS spam detection powered by trained model artifacts.</p>
+          </div>
+        </div>
+        <nav>
+          <a href="#hero">Home</a>
+          <a href="#features">Why it works</a>
+          <a href="#model">Model</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Live AI in your pocket</p>
+            <h2>Turn every SMS into an instant trust decision.</h2>
+            <p class="hero-text">
+              Enter any text message and let the SpamShield model analyze it with the same dataset logic used to train its hidden intelligence.
+            </p>
+
+            <div class="hero-form">
+              <label for="sms-input">Message to classify</label>
+              <textarea id="sms-input" rows="5" placeholder="Type or paste an SMS here"></textarea>
+              <button id="classify-btn" type="button">Scan for Spam</button>
+            </div>
+          </div>
+
+          <div class="hero-panel glass">
+            <div class="panel-header">
+              <span>Instant result</span>
+              <div class="pulse-ring"></div>
+            </div>
+            <div id="result-card" class="result-card">
+              <div class="result-badge" id="result-badge">Ready to scan</div>
+              <div class="result-detail" id="result-text">Paste a message and press Scan for Spam.</div>
+              <div class="result-grid">
+                <div><span>Spam confidence</span><strong id="spam-score">—</strong></div>
+                <div><span>Ham confidence</span><strong id="ham-score">—</strong></div>
+              </div>
+            </div>
+            <div class="result-story" id="result-explanation">
+              The model uses your text to compute a secure classification and reveal the result as a smooth experience.
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-strip" id="features">
+          <div class="feature-card">
+            <h3>Realtime classification</h3>
+            <p>Scan any incoming message instantly and know whether it is spam or ham.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Model-backed trust</h3>
+            <p>The website consumes a trained TF-IDF vectorizer plus a Naive Bayes model artifact.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Interactive visualization</h3>
+            <p>Beautiful glass design, animated status, and clear risk feedback.</p>
+          </div>
+        </section>
+
+        <section class="section" id="model">
+          <div class="section-intro">
+            <span class="eyebrow">Model insights</span>
+            <h2>Built on SMS spam classification artifacts</h2>
+            <p>
+              The website loads the pre-trained `multinomial_naive_bayes_model.h5` classifier and the `tfidf_vectorizer.h5` vocabulary model to power scoring.
+            </p>
+          </div>
+          <div class="model-grid glass">
+            <div>
+              <h3>Vectorizer</h3>
+              <p>Transforms text into the same token space used during training.</p>
+              <p class="metric"><strong id="vocab-size">45,000+</strong> terms</p>
+            </div>
+            <div>
+              <h3>Classifier</h3>
+              <p>Naive Bayes inference delivers fast and trustworthy spam detection for SMS text.</p>
+              <p class="metric">Probability-based thresholding</p>
+            </div>
+            <div>
+              <h3>Experience</h3>
+              <p>Designed as a polished security dashboard with vibrant gradients, micro-interactions, and accessible UI.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
